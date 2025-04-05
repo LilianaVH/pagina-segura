@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explora el Universo del Código</title>
+
+  <!-- Tipografía moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      width: 100%;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #ccc;
+    }
+
+    main {
+      padding: 20px 40px;
+    }
+
+    h2 {
+      color: #222;
+      margin-top: 30px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .code-snippet {
+      background: #f4f4f4;
+      border-left: 5px solid #000;
+      padding: 10px;
+      font-family: monospace;
+      margin: 20px 0;
+    }
+
+    .btn-motivacion {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-motivacion:hover {
+      background-color: #333;
+    }
+
+    #frase-box {
+      margin-top: 15px;
+      padding: 12px;
+      background-color: #f1f1f1;
+      border-left: 5px solid #000;
+      display: none;
+      border-radius: 5px;
+      font-style: italic;
+    }
+
+    .integrantes {
+      background-color: #f9f9f9;
+      border-left: 4px solid #111;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+
+    .integrantes h2 {
+      margin-bottom: 15px;
+      font-size: 1.4em;
+    }
+
+    .integrante {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    footer {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 30px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        font-size: 0.9em;
+      }
+      
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explora el Universo del Código</h1>
+    <p>Programación: La herramienta que impulsa el futuro digital.</p>
+  </header>
+
+  <main>
+    <p>La programación no solo es código; es creatividad, lógica y solución de problemas. Te permite construir desde cero cualquier cosa que imagines.</p>
+
+    <h2>🔍 ¿Sabías que...?</h2>
+    <ul>
+      <li>La NASA aún usa código de hace más de 30 años. ¡Funciona tan bien que no lo han cambiado!</li>
+      <li>El primer "bug" fue un insecto real encontrado en una computadora en 1947.</li>
+      <li>Más de 26 millones de personas en el mundo programan activamente.</li>
+      <li>Aplicaciones como TikTok, Spotify y WhatsApp fueron hechas con lenguajes como Python, Java y JavaScript.</li>
+    </ul>
+
+    <div class="code-snippet">
+      print("¡Hola, mundo!")
+    </div>
+
+    <div style="text-align: center;">
+      <button class="btn-motivacion" onclick="mostrarFrase()">🎯 Dame una frase motivadora</button>
+      <div id="frase-box"></div>
+    </div>
+
+    <div class="integrantes">
+      <h2>👥 Integrantes del equipo</h2>
+      <div class="integrante">🔹 Liliana Vargas Higareda</div>
+      <div class="integrante">🔹 Ramón Torres Barajas</div>
+      <div class="integrante">🔹 Gabriela Huezo Vargas</div>
+    </div>
+  </main>
+
+  <footer>
+    Taller de Sistemas Operativos - 2025
+  </footer>
+
+  <script>
+    const frases = [
+      "Cada error es una oportunidad para mejorar.",
+      "No necesitas ser genio, solo tener ganas de aprender.",
+      "El código es poesía lógica.",
+      "Todo sistema comenzó con una idea y una línea de código.",
+      "Hoy es un buen día para escribir tu primer programa."
+    ];
+
+    function mostrarFrase() {
+      const fraseBox = document.getElementById('frase-box');
+      const random = frases[Math.floor(Math.random() * frases.length)];
+      fraseBox.textContent = random;
+      fraseBox.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
